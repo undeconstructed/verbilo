@@ -1,0 +1,67 @@
+
+body {
+  background-color: #eee;
+  padding: 1em;
+  font-size: larger;
+}
+
+.verbtool {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+.verbtool .words {
+  padding: 5px;
+}
+.verbtool .timebox {
+  position: relative;
+  width: 800px;
+  height: 80px;
+  border: 1px solid black;
+}
+.verbtool .timebox .timeline {
+  position: absolute;
+  top: 0; right: 50%; bottom: 0; left: 50%;
+  width: 1px;
+  background-color: black;
+  text-align: center;
+}
+.verbtool .timebox .eye {
+  position: absolute;
+  top: 5px; width: 40px; height: 40px; left: 380px;
+  background-color: orange;
+  border-radius: 20px;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 40px;
+  cursor: move;
+}
+.verbtool .timebox .actionbox {
+  position: absolute;
+  top: 40px; left: 0px; bottom: 5px;
+  border: 1px solid black;
+  display: flex;
+  width: 50px;
+}
+
+.timebox .actionbox .start {
+  flex-grow: 0;
+  background-color: green;
+  width: 5px;
+  cursor: ew-resize;
+}
+.timebox .actionbox .body {
+  background-color: white;
+  flex-grow: 2;
+  cursor: move;
+}
+.timebox .actionbox .end {
+  flex-grow: 0;
+  background-color: red;
+  width: 5px;
+  cursor: ew-resize;
+}
