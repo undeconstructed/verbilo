@@ -1,4 +1,8 @@
 
+:root {
+  --egreen: rgb(0, 153, 0);
+}
+
 body {
   background-color: #eee;
   padding: 1em;
@@ -14,16 +18,32 @@ h1 {
   flex-direction: column;
   align-content: space-around;
   align-items: center;
+  border-radius: 1em;
+  background-color: #ddd;
+  padding: 1em;
 }
 .verbtool .words {
   padding: 5px;
 }
+.verbtool .times {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.verbtool .times .side {
+  flex-grow: 0;
+  font-size: 200%;
+}
 .verbtool .events {
+  flex-grow: 1;
+  margin: 1em;
   position: relative;
   width: 800px;
   min-height: 80px;
-  /* border: 1px solid black; */
   padding: 20px 0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-radius: 1em;
 }
 .verbtool .events .timeline {
   position: absolute;
@@ -35,7 +55,7 @@ h1 {
 .verbtool .events .eye {
   position: absolute;
   top: 20px; width: 40px; height: 40px; left: 380px;
-  background-color: orange;
+  background-color: var(--egreen);
   border-radius: 20px;
   line-height: 40px;
   vertical-align: middle;
@@ -62,10 +82,11 @@ h1 {
 }
 
 .events .eventbox {
-  border: 1px solid black;
+  border-radius: 5px;
   display: flex;
 }
 .events .eventbox .start {
+  border-radius: 5px;
   flex-grow: 0;
   flex-shrink: 0;
   background-color: green;
@@ -83,6 +104,7 @@ h1 {
   white-space: nowrap;
 }
 .events .eventbox .end {
+  border-radius: 5px;
   flex-grow: 0;
   flex-shrink: 0;
   background-color: red;
