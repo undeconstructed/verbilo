@@ -5,9 +5,11 @@ body {
   font-size: larger;
 }
 
+h1 {
+  text-align: center;
+}
+
 .verbtool {
-  border: 1px solid black;
-  padding: 5px;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -16,22 +18,23 @@ body {
 .verbtool .words {
   padding: 5px;
 }
-.verbtool .timebox {
+.verbtool .events {
   position: relative;
   width: 800px;
-  height: 80px;
-  border: 1px solid black;
+  min-height: 80px;
+  /* border: 1px solid black; */
+  padding: 20px 0;
 }
-.verbtool .timebox .timeline {
+.verbtool .events .timeline {
   position: absolute;
   top: 0; right: 50%; bottom: 0; left: 50%;
-  width: 1px;
+  width: 2px;
   background-color: black;
   text-align: center;
 }
-.verbtool .timebox .eye {
+.verbtool .events .eye {
   position: absolute;
-  top: 5px; width: 40px; height: 40px; left: 380px;
+  top: 20px; width: 40px; height: 40px; left: 380px;
   background-color: orange;
   border-radius: 20px;
   line-height: 40px;
@@ -39,28 +42,49 @@ body {
   text-align: center;
   font-size: 40px;
   cursor: move;
+  border-bottom: 2px solid black;
 }
-.verbtool .timebox .actionbox {
-  position: absolute;
-  top: 40px; left: 0px; bottom: 5px;
-  border: 1px solid black;
+.verbtool .events .lines {
+  margin-top: 60px;
   display: flex;
-  width: 50px;
+  flex-direction: column;
+}
+.verbtool .events .lines .eventline {
+  position: relative;
+  height: 50px;
+}
+.verbtool .events .lines .eventline .eventbox {
+  position: absolute;
+  top: 5px; bottom: 5px;
+}
+.verbtool .sentences {
+  text-align: center;
 }
 
-.timebox .actionbox .start {
+.events .eventbox {
+  border: 1px solid black;
+  display: flex;
+}
+.events .eventbox .start {
   flex-grow: 0;
+  flex-shrink: 0;
   background-color: green;
   width: 5px;
   cursor: ew-resize;
 }
-.timebox .actionbox .body {
+.events .eventbox .body {
   background-color: white;
   flex-grow: 2;
   cursor: move;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
 }
-.timebox .actionbox .end {
+.events .eventbox .end {
   flex-grow: 0;
+  flex-shrink: 0;
   background-color: red;
   width: 5px;
   cursor: ew-resize;
