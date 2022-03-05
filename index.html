@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Verbfarilo</title>
+  <title>Verbilo</title>
 
   <link rel="stylesheet" href="css/bootstrap-reboot.css">
   <link rel="stylesheet" href="css/custom.css">
@@ -13,15 +13,15 @@
 
 <body>
 
-  <h1>Verbfarilo</h1>
+  <h1>Verbilo</h1>
 
   <div class="verbtool">
-    <div class="words">
+    <div class="words"><form>
       <input type="text" name="subject" placeholder="subjekto">
-      <input type="text" name="verb" placeholder="verbo">
+      <input type="text" name="verb" placeholder="verb-radiko" required="true">
       <input type="text" name="object" placeholder="objekto">
-      <button type="button" name="button">aldoni</button>
-    </div>
+      <button type="submit" name="button">aldoni</button>
+    </form></div>
     <div class="times">
       <div class="past side">inta</div>
       <div class="events">
@@ -34,6 +34,7 @@
     </div>
     <div class="sentences">
     </div>
+    <button type="button" name="clear">maplenigi</button>
   </div>
 
   <template id="eventlinetemplate">
